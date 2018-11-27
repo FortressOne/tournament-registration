@@ -15,7 +15,8 @@ class PlayersController < ApplicationController
   # GET /players/new
   def new
     @player = Player.new
-    @players = Player.all
+    @players = Player.order(donation: :desc)
+    @total_pledged = Player.sum(:donation)
   end
 
   # GET /players/1/edit

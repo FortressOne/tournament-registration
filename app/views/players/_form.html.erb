@@ -11,22 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: "form-control" %>
+    <small id="emailHelp" class="form-text text-muted">We won't share with anyone.</small>
   </div>
 
-  <div class="field">
-    <%= form.label :donation %>
-    <%= form.number_field :donation %>
+  <div class="form-group">
+    <%= form.label :donation_in_aud %>
+    <%= form.number_field :donation, class: "form-control" %>
+    <small id="donationHelp" class="form-text text-muted">Don't worry, we're not collecting donations yet - just guaging interest. $0 is fine.</small>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

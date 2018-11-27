@@ -6,9 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Email</th>
       <th>Donation</th>
-      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -16,10 +14,7 @@
     <% @players.each do |player| %>
       <tr>
         <td><%= player.name %></td>
-        <td><%= player.email %></td>
         <td><%= player.donation %></td>
-        <td><%= link_to 'Show', player %></td>
-        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
