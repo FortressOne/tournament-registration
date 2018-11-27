@@ -25,10 +25,10 @@
   <div class="form-group">
     <%= form.label :donation_in_aud %>
     <%= form.number_field :donation, value: 0, class: "form-control" %>
-    <small id="donationHelp" class="form-text text-muted">Don't worry, we're not collecting donations yet - just guaging interest. $0 is fine.</small>
+    <small id="donationHelp" class="form-text text-muted">Don't worry, we're not collecting donations yet - just gauging interest. $0 is fine.</small>
   </div>
 
   <div class="actions">
-    <%= form.submit class: "btn btn-primary" %>
+    <%= form.submit "Register", class: "btn btn-primary" %>
   </div>
 <% end %>
