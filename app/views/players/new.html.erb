@@ -1,5 +1,25 @@
+<h1>FortressOne Oceania Tournament Registration</h1>
 <h1>New Player</h1>
 
 <%= render 'form', player: @player %>
 
-<%= link_to 'Back', players_path %>
+<h1>Players</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Donation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players.each do |player| %>
+      <tr>
+        <td><%= player.name %></td>
+        <td><%= player.donation %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

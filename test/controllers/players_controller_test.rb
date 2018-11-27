@@ -28,11 +28,6 @@ class PlayersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get edit" do
-    get edit_player_url(@player)
-    assert_response :success
-  end
-
   test "should update player" do
     patch player_url(@player), params: { player: { donation: @player.donation, email: @player.email, name: @player.name } }
     assert_redirected_to player_url(@player)

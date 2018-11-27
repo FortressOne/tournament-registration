@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  resources :players
+  root 'players#new'
+  resources :players, only: [:index, :new, :create, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
