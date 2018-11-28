@@ -4,7 +4,8 @@ class PlayersController < ApplicationController
   # GET /players
   # GET /players.json
   def index
-    @players = Player.all
+    @players = Player.order(donation: :desc)
+    @total_pledged = Player.sum(:donation)
   end
 
   # GET /players/1

@@ -6,27 +6,6 @@
   </div>
 
   <div class="col-6">
-    <h2>Registered Players</h2>
-
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Pledge (AUD)</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @players.each do |player| %>
-          <tr>
-            <td><%= player.name %></td>
-            <td><%= "$#{player.donation}" %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-
-    <h2>Total pledged to date: $<%= @total_pledged %></h2>
-
+    <%= render 'list', players: @players, total_pledged: @total_pledged %>
   </div>
 </div>
