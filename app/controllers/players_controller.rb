@@ -5,7 +5,6 @@ class PlayersController < ApplicationController
   # GET /players.json
   def index
     @players = Player.order(donation: :desc)
-    @total_pledged = Player.sum(:donation)
   end
 
   # GET /players/1
@@ -17,7 +16,6 @@ class PlayersController < ApplicationController
   def new
     @player = Player.new
     @players = Player.order(donation: :desc)
-    @total_pledged = Player.sum(:donation)
   end
 
   # GET /players/1/edit

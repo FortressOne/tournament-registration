@@ -4,7 +4,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Pledge (AUD)</th>
     </tr>
   </thead>
 
@@ -12,10 +11,7 @@
     <% players.each do |player| %>
       <tr>
         <td><%= player.name %></td>
-        <td><%= "$#{player.donation}" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<h2>Total pledged to date: $<%= total_pledged %></h2>
