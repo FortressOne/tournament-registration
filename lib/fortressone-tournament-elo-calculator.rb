@@ -20,6 +20,13 @@ teams["charming"].wins_from(teams["chiken"])
 teams["charming"].wins_from(teams["sobar"])
 teams["ragtag"].wins_from(teams["chiken"])
 teams["ragtag"].wins_from(teams["penguin"])
+teams["sobar"].wins_from(teams["chiken"])
+teams["ragtag"].wins_from(teams["sobar"])
+teams["charming"].wins_from(teams["penguin"])
+teams["chiken"].wins_from(teams["penguin"])
+teams["charming"].wins_from(teams["ragtag"])
+teams["charming"].wins_from(teams["ragtag"])
+teams["sobar"].wins_from(teams["ragtag"])
 
 results = teams.map do |name, elo|
   {name => elo.rating}
